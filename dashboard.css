@@ -1,0 +1,212 @@
+/* Stiluri generale */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    /* Presupunând un fundal închis la culoare */
+    color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    /* sau orice lățime preferi */
+    background-color: #232323;
+    /* culoarea fundalului pentru sidebar */
+    height: 100vh;
+    /* întreaga înălțime a viewport-ului */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    /* pentru scrolling dacă conținutul depășește ecranul */
+    /* Mai multe stiluri pentru padding, border etc. */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    /* trebuie să fie egală sau mai mare decât lățimea sidebar-ului */
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* spațiu sub antet */
+    padding: 0 10px;
+    /* Mai multe stiluri pentru aspect */
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    /* spațiu între carduri */
+    /* Mai multe stiluri pentru aliniere și aspect */
+}
+
+/* Responsive Layout pentru Main Content */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* sidebar-ul devine un header pe dispozitive mici */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+#addButton {
+    margin-top: 1rem;
+    width: 10rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #3200d8;
+    color: white;
+    cursor: pointer;
+}
+
+#addButton:hover {
+    background-color: #0056b3;
+}
+
+#addSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: space-around; */
+    align-items: center;
+}
+
+.project-card {
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card-plus {
+    background: #70729d;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    width: 5rem;
+    height: 14rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.project-card-plus p {
+    font-size: 4rem;
+}
+
+.project-thumbnail {
+    background: #222;
+    /* Presupunând că este un placeholder pentru o imagine */
+    height: 150px;
+    border-radius: 5px;
+}
+
+.project-details h3 {
+    margin: 10px 0;
+}
+
+.project-details p {
+    font-size: 0.9rem;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* sau orice font preferi */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    /* Adaugă stiluri specifice pentru logo */
+    height: 40px;
+    /* Ajustează în funcție de dimensiunea reală a logo-ului */
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    /* Ajustează în funcție de schemă de culori */
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.menu-link .icon {
+    margin-right: 10px;
+}
+
+.menu-item.active .menu-link,
+.menu-link:hover {
+    background-color: #555;
+    /* O culoare ușor diferită pentru hover/active */
+}
+
+/* Stiluri pentru responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}

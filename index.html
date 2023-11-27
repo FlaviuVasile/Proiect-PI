@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/session.js"></script>
+
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <div>
+                <form>
+                    <div id="welcomeLabel">Bine ai venit!</div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Parolă:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </form>
+                <button id="loginButton" onclick="loginUser()">Loghează-te</button>
+                <div id="registerLabel">Nu ai cont?
+                    <a href="/register" style="color: blue; margin-left: 5px; text-decoration: none;">
+                        Inregistreaza-te
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+
+.bg {
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    background-image: url(../assets/bg.png);
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: white;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 20px;
+    outline: 10px solid rgba(255, 255, 255, 0.319);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    width: 17rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 1rem;
+    color: #333;
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+#loginButton {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #3200d8;
+    color: white;
+    cursor: pointer;
+}
+
+#loginButton:hover {
+    background-color: #0056b3;
+}
+
+#registerLabel {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#welcomeLabel {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
