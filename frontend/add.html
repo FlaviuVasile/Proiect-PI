@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/addProject.js"></script>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <h1 class="brand-name">ProjectFlow</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="/dashboard" class="menu-link">
+                        <span class="icon">📁</span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="menu-item active">
+                    <a href="/add" class="menu-link">
+                        <span class="icon">➕</span>
+                        <span class="title">Adauga proiect</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">⚙️</span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">📙</span>
+                        <span class="title">Help & Support</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">🤝</span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h2 id="header-label">Adauga un proiect</h2>
+        </header>
+        <section class="projects">
+            <div id="addSection">
+                <form>
+                    <div>
+                        <label style="color: white;" for="titlu">Titlu:</label>
+                        <input type="text" id="titlu" name="titlu" required>
+                    </div>
+                    <div>
+                        <label style="color: white;" for="descriere">Descriere:</label>
+                        <input type="text" id="descriere" name="descriere" required>
+                    </div>
+                </form>
+                <button id="addButton" onclick="adaugaProiect()">Adauga proiectul</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

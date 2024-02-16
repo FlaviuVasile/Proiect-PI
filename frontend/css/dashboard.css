@@ -1,0 +1,323 @@
+/* Stiluri generale */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    /* Presupunând un fundal închis la culoare */
+    color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    /* sau orice lățime preferi */
+    background-color: #232323;
+    /* culoarea fundalului pentru sidebar */
+    height: 100vh;
+    /* întreaga înălțime a viewport-ului */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    /* pentru scrolling dacă conținutul depășește ecranul */
+    /* Mai multe stiluri pentru padding, border etc. */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    /* trebuie să fie egală sau mai mare decât lățimea sidebar-ului */
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* spațiu sub antet */
+    padding: 0 10px;
+    /* Mai multe stiluri pentru aspect */
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    /* spațiu între carduri */
+    /* Mai multe stiluri pentru aliniere și aspect */
+}
+
+/* Responsive Layout pentru Main Content */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        /* sidebar-ul devine un header pe dispozitive mici */
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+#addButton {
+    margin-top: 1rem;
+    width: 10rem;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #3200d8;
+    color: white;
+    cursor: pointer;
+}
+
+.action-button {
+    text-decoration: none;
+}
+
+.action-button span {
+    color: gray;
+}
+
+#addButton:hover {
+    background-color: #0056b3;
+}
+
+#addSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: space-around; */
+    align-items: center;
+}
+
+.project-card {
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(15rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-padding {
+    position: relative;
+    left: 1.5rem;
+}
+
+.left-padding-icon {
+    position: relative;
+    top: -0.28rem;
+    left: 1.5rem;
+}
+
+#projects {
+    display: flex;
+}
+
+.project-card-plus {
+    background: #70729d;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    width: 5rem;
+    height: 14rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.project-card-plus p {
+    font-size: 4rem;
+}
+
+.project-thumbnail {
+    background: #222;
+    /* Presupunând că este un placeholder pentru o imagine */
+    height: 150px;
+    border-radius: 5px;
+}
+
+.project-details h3 {
+    margin: 10px 0;
+}
+
+.project-details p {
+    font-size: 0.9rem;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* sau orice font preferi */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    /* Adaugă stiluri specifice pentru logo */
+    height: 40px;
+    /* Ajustează în funcție de dimensiunea reală a logo-ului */
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    /* Ajustează în funcție de schemă de culori */
+}
+
+.navigation {
+    margin-top: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.menu-link .icon {
+    margin-right: 10px;
+}
+
+.menu-item.active .menu-link,
+.menu-link:hover {
+    background-color: #555;
+    /* O culoare ușor diferită pentru hover/active */
+}
+
+/* Stiluri pentru responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}
+
+.add-sprint-form {
+    background-color: #f4f4f4;
+    /* culoare de fundal deschisă */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.add-sprint-form h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.add-sprint-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.add-sprint-form input[type="text"],
+.add-sprint-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* asigură-te că padding-ul nu modifică lățimea */
+}
+
+.add-sprint-form button {
+    background-color: #007bff;
+    /* o nuanță de albastru */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-sprint-form button:hover {
+    background-color: #0056b3;
+    /* o nuanță mai închisă la hover */
+}
+
+.project-thumbnail:hover {
+    background-color: rgba(195, 164, 164, 0.687);
+}
+
+.sprint-details {
+    border: 1px solid #ddd;
+    /* chenar gri subtil */
+    border-radius: 8px;
+    /* colțuri rotunjite */
+    background-color: #f9f9f9;
+    /* fundal deschis */
+    margin: 10px;
+    /* spațiu în jurul cardului */
+    padding: 15px;
+    /* spațiu în interiorul cardului */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* umbra ușoară pentru profunzime */
+}
+
+.sprint-container {
+    text-align: left;
+    /* aliniere text la stânga */
+}
+
+.sprint-container h3 {
+    color: #333;
+    /* culoare titlu închisă */
+    margin-bottom: 5px;
+    /* spațiu sub titlu */
+}
+
+.sprint-container p {
+    color: #666;
+    /* textul mai închis */
+    font-size: 0.9em;
+    /* mărimea textului ușor mai mică */
+    margin-bottom: 4px;
+    /* spațiu între paragrafe */
+}

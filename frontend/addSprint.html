@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/project.js"></script>
+    <script src="js/addSprint.js"></script>
+
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <h1 class="brand-name">ProjectFlow</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu-item active">
+                    <a href="/dashboard" class="menu-link">
+                        <span class="icon">📁</span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item active">
+                    <a href="#" class="menu-link">
+                        <span class="left-padding-icon icon">⌞</span>
+                        <span class="left-padding projectTitle"></span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/add" class="menu-link">
+                        <span class="icon">➕ </span>
+                        <span class="title">Adauga proiect</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">⚙️</span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">📙</span>
+                        <span class="title">Help & Support</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">🤝</span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <h2 class="projectTitle"></h2>
+        </header>
+        <form class="add-sprint-form" action="/addSprint" method="POST">
+            <h3>Adaugă un Sprint Nou</h3>
+            <label for="sprintName">Nume Sprint:</label>
+            <input type="text" id="sprintName" name="sprintName" required>
+
+            <label for="startDate">Data de Început:</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="endDate">Data de Sfârșit:</label>
+            <input type="date" id="endDate" name="endDate" required>
+
+            <label for="goal">Obiectivul Sprintului:</label>
+            <input type="text" id="goal" name="goal">
+            <button type="submit">Adaugă Sprint</button>
+        </form>
+    </main>
+</body>
+
+</html>

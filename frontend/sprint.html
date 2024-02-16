@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/sprint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+
+    .container {
+        width: 60%;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+        text-align: center;
+    }
+
+    .key-value {
+        margin-bottom: 10px;
+    }
+
+    .key-value label {
+        font-weight: bold;
+    }
+
+    .key-value span {
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo-container">
+            <h1 class="brand-name">ProjectFlow</h1>
+        </div>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu-item active">
+                    <a href="/dashboard" class="menu-link">
+                        <span class="icon">📁</span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item active">
+                    <a href="/dashboard" class="menu-link">
+                        <span class="left-padding-icon icon">⌞</span>
+                        <span class="left-padding projectTitle"></span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/add" class="menu-link">
+                        <span class="icon">➕ </span>
+                        <span class="title">Adauga proiect</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">⚙️</span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">📙</span>
+                        <span class="title">Help & Support</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span class="icon">🤝</span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header style="display: flex; flex-direction: column;" class="header">
+            <div style="display: flex;">
+                <div class="container" style="width: 15rem; height: 25rem;">
+                    <h2>Sprint Details</h2>
+                    <div class="key-value" id="sprint_name">
+                        <label>Sprint Name:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="start_date">
+                        <label>Start Date:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="end_date">
+                        <label>End Date:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="goal">
+                        <label>Goal:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="status">
+                        <label>Status:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="indicator">
+                        <label>Indicator:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="hours_worked">
+                        <label>Hours Worked:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="capacity">
+                        <label>Capacity:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="story_points_completed">
+                        <label>Story Points Completed:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <div class="key-value" id="total_story_points">
+                        <label>Total Story Points:</label>
+                        <span contenteditable="true"></span>
+                    </div>
+                    <button onclick="saveDetails()">Save</button>
+                </div>
+                <div class="container" style="width: 35rem;  height: 25rem;">
+                    <h2>Burndown charts</h2>
+                    <div class="chart-container">
+                        <canvas style="background-color: #ddd;" id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <br>
+                <div style="display: flex;">
+                    <div class="container" style="width: 20rem;">
+                        <div class="chart-container">
+                            <canvas style="background-color: #ddd;" id="sprintCompletionChartCanvas"></canvas>
+                        </div>
+                    </div>
+                    <div class="container" style="width: 20rem;">
+                        <div class="chart-container">
+                            <canvas style="background-color: #ddd;" id="capacityUtilizationChartCanvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    </main>
+</body>
+
+</html>
