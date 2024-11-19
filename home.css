@@ -1,0 +1,162 @@
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fond gris clair */
+    color: white;
+}
+
+/* En-tête */
+header {
+    background-color: #d4ed00; /* Couleur jaune-vert */
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: black; /* Texte noir pour contraster avec l'en-tête */
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li a {
+    color: black; /* Liens noirs pour contraster avec l'en-tête */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Bannière principale */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    color: royalblue;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: royalblue;
+    color: white;
+    text-decoration: none;
+}
+
+.hero .btn:hover {
+    background-color: darkblue;
+}
+
+/* Fonctionnalité interactive */
+.password-toggle {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: white;
+    color: royalblue;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.password-toggle h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.password-toggle .input-box {
+    position: relative;
+    margin-top: 10px;
+}
+
+.password-toggle input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.password-toggle img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Section fonctionnalités */
+.features {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(216, 116, 22);
+    color: white;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.features h2 {
+    margin-bottom: 1rem;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #d4ed00; /* Même couleur que l'en-tête */
+    color: black; /* Texte noir pour contraster */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
